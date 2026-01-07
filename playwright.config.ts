@@ -25,11 +25,8 @@ export default defineConfig({
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: [
     // Use absolute paths so reports are written consistently regardless of CWD
-    ['html', { outputFolder: path.resolve(__dirname, 'playwright-report'), open: 'never' }],
-    ['json', { outputFile: path.resolve(__dirname, 'test-results.json') }],
-    ['junit', { outputFile: path.resolve(__dirname, 'results.xml') }],
-    ['list'],
-  ],
+    ['html', { outputFolder: path.resolve(__dirname, 'docs'), open: 'never' }]
+    ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */

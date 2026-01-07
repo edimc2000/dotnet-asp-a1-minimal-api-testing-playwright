@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 
 const baseURL = 'http://localhost:5220'
 
-test('Test 20: Show all products (from seed) ', async ({ request }) => {
+test('Test 20: Show all products (from seed111) ', async ({ request }) => {
     const endpoint = `${baseURL}/product/show/all`
     console.log('Base URL:', baseURL)
     console.log('Endpoint:', endpoint)
