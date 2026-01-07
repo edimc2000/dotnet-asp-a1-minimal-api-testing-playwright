@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 
 const baseURL = 'http://localhost:5220'
 
-test('Test 30: search using product Id', async ({ request }) => {
+test('Test 30: Search using product Id', async ({ request }) => {
 
     const productId = [1, 12]
     const endpoint = `${baseURL}/product/search/id/${productId}`
@@ -52,7 +52,7 @@ test('Test 30: search using product Id', async ({ request }) => {
 
 });
 
-test('Test 31: search using product Id that does not exist', async ({ request }) => {
+test('Test 31: Search using product Id that does not exist', async ({ request }) => {
 
 
     const productId = [1000, 2000]
