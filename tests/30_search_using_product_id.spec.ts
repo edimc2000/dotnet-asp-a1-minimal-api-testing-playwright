@@ -95,5 +95,48 @@ test('Test 31: Search using product Id that does not exist', async ({ request })
     }
 
 
+})
+
+test.only('Test 31: Search using an invalid product Id (non integer)', async ({ request }) => {
+
+    const productId = ["test", "1"]
+    const endpoint = `${baseURL}/product/search/id/${productId}`
+
+
+    // Verify values of seed items 
+    for (let index = 0; index < productId.length; index++) {
+        const endpoint = `${baseURL}/product/search/id/${productId[index]}`
+        const response = await request.get(endpoint)
+        const responseBody = await response.json()
+
+        // const assertion = {
+        //     productId: -1,
+        //     name: 'No products found',
+        //     description: 'No products found',
+        //     price: 0
+        // }
+
+        // these are for the report's console capture
+        console.log('Endpoint:', endpoint)
+        console.log('Response Status:', response.status())
+        console.log('Response Status Text:', response.statusText())
+        console.log('Response Body:', responseBody)
+
+
+        // // Assertion: Check HTTP status code - it should be 200 
+        // expect(response.status(), `Verify reponse status ( --- Trial ${index + 1} ---)`).toEqual(200);
+
+        // // Check the LENGTH of the responseBody array - it should return 1 item
+        // expect(responseBody.length, "Verify length of JSON entries").toEqual(1);
+
+
+        // // Verify actual values 
+        // expect(responseBody[0].productId, "Verify value - productId").toEqual(assertion.productId);
+        // expect(responseBody[0].name, "Verify value  - name").toEqual(assertion.name);
+        // expect(responseBody[0].description, "Verify value - description").toEqual(assertion.description);
+        // expect(responseBody[0].price, "Verify value - price").toEqual(assertion.price);
+
+    }
+
 
 })
