@@ -78,7 +78,7 @@
       "line": 0,
       "specs": [
         {
-          "title": "Test 10: Show all products (from seed110) ",
+          "title": "Test 20: Show all products (from seed) ",
           "ok": true,
           "tags": [],
           "tests": [
@@ -93,7 +93,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 29,
+                  "duration": 33,
                   "errors": [],
                   "stdout": [
                     {
@@ -114,7 +114,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-01-07T20:07:34.030Z",
+                  "startTime": "2026-01-07T20:24:51.151Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -122,7 +122,7 @@
               "status": "expected"
             }
           ],
-          "id": "00b1e84b119efdab994f-992b5196a2f75a7c7882",
+          "id": "00b1e84b119efdab994f-ea8b7f019d8e6a61df38",
           "file": "show_all_products_test.spec.ts",
           "line": 5,
           "column": 5
@@ -132,8 +132,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-01-07T20:07:33.381Z",
-    "duration": 708.442,
+    "startTime": "2026-01-07T20:24:50.435Z",
+    "duration": 780.468,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,

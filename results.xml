@@ -1,6 +1,6 @@
-<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="0.708442">
-<testsuite name="show_all_products_test.spec.ts" timestamp="2026-01-07T20:07:33.395Z" hostname="chromium" tests="1" failures="0" skipped="0" time="0.029" errors="0">
-<testcase name="Test 10: Show all products (from seed110) " classname="show_all_products_test.spec.ts" time="0.029">
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="0.7804679999999999">
+<testsuite name="show_all_products_test.spec.ts" timestamp="2026-01-07T20:24:50.451Z" hostname="chromium" tests="1" failures="0" skipped="0" time="0.033" errors="0">
+<testcase name="Test 20: Show all products (from seed) " classname="show_all_products_test.spec.ts" time="0.033">
 <system-out>
 <![CDATA[Base URL: http://localhost:5220
 Endpoint: http://localhost:5220/product/show/all
