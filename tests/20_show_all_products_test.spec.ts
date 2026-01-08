@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 import { Product, ApiResult, ProductResponse } from './ApiInterfaces';
 import { baseURL, divider } from '../dev_environment';
 
-test('Test 20: Verify endpoint for show all products endpoint using GET (with seed data)', async ({ request }) => {
+test('Test 20: Verify endpoint for show all products using GET (with seed data)', async ({ request }) => {
     const endpoint = `${baseURL}/product/show/all`
     const response = await request.get(endpoint)
     const responseData: ProductResponse = await response.json();
@@ -31,7 +31,7 @@ test('Test 20: Verify endpoint for show all products endpoint using GET (with se
 });
 
 
-test('Test 21: Verify endpoint for show all products endpoint using POST (with seed data)', async ({ request }) => {
+test('Test 21: Verify endpoint for show all products using POST (with seed data)', async ({ request }) => {
     const endpoint = `${baseURL}/product/show/all`
     const response = await request.post(endpoint)
 
