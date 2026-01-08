@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 import { Product, ApiResult, ProductResponse } from './ApiInterfaces';
 import { baseURL, divider } from '../dev_environment';
 
-test.only('Test 40: Delete a product with valid ProductId', async ({ request }) => {
+test('Test 40: Delete a product with valid ProductId', async ({ request }) => {
 
     const productId = [1, 12, 14]
     // const endpoint = `${baseURL}/product/delete/${productId[0]}`
