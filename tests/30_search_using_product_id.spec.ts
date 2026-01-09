@@ -114,3 +114,22 @@ test('Test 32: Search using an invalid ProductId (non integer & integers that ca
 
 })
 
+test('Test 32: Search using an empty ProductId', async ({ request }) => {
+    const assertCode = 404
+    const endpoint = `${baseURL}/product/search/id/`
+    const response = await request.get(endpoint)
+    
+
+
+
+    // these are for the report's console capture
+    divider()
+    console.log('Endpoint:', endpoint)
+    console.log('Response Status:', response.status())
+    console.log('Response Status Text:', response.statusText())
+
+    // Assertion: Check HTTP status code - it should be 404 
+    expect(response.status(), `Verify reponse status `).toEqual(assertCode)
+})
+
+

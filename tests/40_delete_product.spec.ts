@@ -5,39 +5,54 @@ import { baseURL, divider } from '../dev_environment';
 test('Test 40: Delete a product with valid ProductId', async ({ request }) => {
 
     const productId = [1, 12, 14]
-    // const endpoint = `${baseURL}/product/delete/${productId[0]}`
-    // const response = await request.delete(endpoint)
-    // const responseData: ProductResponse = await response.json();
-    // const products = responseData.data;
-
-
+  
     for (let index = 0; index < productId.length; index++) {
         const endpoint = `${baseURL}/product/delete/${productId[index]}`
         const response = await request.delete(endpoint)
         const responseData: ProductResponse = await response.json();
-        // const products = responseData.data;
-
+     
         // these are for the report's console capture
         divider()
         console.log('Endpoint:', endpoint)
         console.log('Response Status:', response.status())
         console.log('Response Status Text:', response.statusText())
         console.log('Response Body:', responseData)
+    }
+});
 
+test('Test 41: Delete a product with invalid ProductId', async ({ request }) => {
 
-        // // Assertion: Check HTTP status code - it should be 200 
-        // expect(response.status(), "Verify reponse status").toEqual(200);
+    const productId = [100, "120", "aa"]
 
-        // // Check the LENGTH of the responseBody array - it should return 1 item
-        // expect(products.length, "Verify length of JSON entries").toEqual(15);
-
-        // // Verify that the first object contains the required properties 
-        // expect(products[0]).toHaveProperty('productId');
-        // expect(products[0]).toHaveProperty('name');
-        // expect(products[0]).toHaveProperty('description');
-        // expect(products[0]).toHaveProperty('price');
+    for (let index = 0; index < productId.length; index++) {
+        const endpoint = `${baseURL}/product/delete/${productId[index]}`
+        const response = await request.delete(endpoint)
+        const responseData: ProductResponse = await response.json();
+         // these are for the report's console capture
+        divider()
+        console.log('Endpoint:', endpoint)
+        console.log('Response Status:', response.status())
+        console.log('Response Status Text:', response.statusText())
+        console.log('Response Body:', responseData)
 
     }
 });
+
+test('Test 42: Delete a product using an empty ProductId', async ({ request }) => {
+    const assertCode = 404
+    const endpoint = `${baseURL}/product/delete/`
+    const response = await request.delete(endpoint)
+
+    // these are for the report's console capture
+    divider()
+    console.log('Endpoint:', endpoint)
+    console.log('Response Status:', response.status())
+    console.log('Response Status Text:', response.statusText())
+    
+
+    // Assertion: Check HTTP status code - it should be 404 
+    expect(response.status(), `Verify reponse status `).toEqual(assertCode)
+})
+
 
 
