@@ -91,8 +91,8 @@ test('Test 31: Search using ProductId that does not exist', async ({ request }) 
 
 test('Test 32: Search using an invalid ProductId (non integer & integers that can be parsed)', async ({ request }) => {
 
-    const productId = ["test", "1", "100"]
-    const assertCodes = [400, 200, 404]
+    const productId = ["test", "101", "1"]
+    const assertCodes = [400, 404, 200]
 
     for (let index = 0; index < productId.length; index++) {
         const endpoint = `${baseURL}/product/search/id/${productId[index]}`
