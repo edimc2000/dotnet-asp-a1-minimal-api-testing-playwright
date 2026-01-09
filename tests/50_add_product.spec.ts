@@ -273,5 +273,4 @@ test('Test 58: Sending malformed JSON data 2',
         console.log('Response Status:', response.status())
         console.log('Response Status Text:', response.statusText())
         console.log('Response Body:', responseData)
-
     });
